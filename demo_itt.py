@@ -1,7 +1,7 @@
 import streamlit as st
 import time
-from components.ai_modules.itt_modules.ollama_llava import LLavaOllama
-from components.system_module.gpu_modules import GpuModule
+from ai_modules.itt_modules.ollama_llava import LLavaOllama
+from system_components.system_gpu import GpuModule
 
 # Define name
 class_name = LLavaOllama.__class__.__name__
