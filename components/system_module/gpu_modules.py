@@ -16,8 +16,9 @@ class GpuModule():
         # Used VRAM
         used_vram = info.used
 
+
         # % Usage
-        usage = round((free_vram/total_vram),2)
+        usage = round((used_vram/total_vram),2)
         return free_vram,total_vram,used_vram,usage
 
     def _millify(n):
@@ -27,9 +28,9 @@ class GpuModule():
                              int(math.floor(0 if n == 0 else math.log10(abs(n)) / 3))))
 
         result = str(n / 10 ** (3 * millidx))
-        result = round(float(result),2)
-        # return str(result) + str(millnames[millidx])
-        return str(result)
+        # result =
+        return str(round(float(result),2)) + str(millnames[millidx])
+        # return str(result)
     @staticmethod
     def formmated_property(free_vram,total_vram,used_vram):
         free_vram = GpuModule._millify(free_vram)
